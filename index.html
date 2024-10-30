@@ -1,0 +1,109 @@
+// const header=document.createElement('h1');
+// header.innerHTML="HELLO WORLD USING JS";
+// const r=document.getElementById('root');
+// r.appendChild(header);
+
+
+
+const header=React.createElement("h1",{},"HELLO WORLD USING REACT");
+const root=ReactDOM.createRoot(document.getElementById("root"));
+root.render(header);
+
+
+const parent=React.createElement("div",{id:"parent"},[
+    React.createElement("div",{id:"c1"},[
+        React.createElement("h1",{},"CHILD1-1"),
+        React.createElement("h1",{},"CHILD1-2")
+    ]),
+    React.createElement("div",{id:"c2"},React.createElement("h1",{},"CHILD2")),
+])
+
+const root=ReactDOM.createRoot(document.getElementById("root"));
+root.render(parent);
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HELLO WORLD USING HTML</h1>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="brain.js"></script>
+</body>
+
+
+
+
+
+
+
+npm install react
+npm install react-dom
+npm install -D vite
+
+
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+// NOTE change js to jsx
+
+
+const jsxheader=<h1>HELLO USING JSX</h1>
+
+
+const root=ReactDOM.createRoot(document.getElementById("root"));
+root.render(jsxheader);
+
+
+
+
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+
+function Childp()
+{
+  return (
+    <h1>HI</h1>
+  )
+}
+function Chidl2()
+{
+  return (
+    <h1>HELO I AM CHILD 2</h1>
+  )
+}
+
+function Child()
+{
+  return (
+    <>
+    <Chidl2></Chidl2>
+    <Childp></Childp>
+    <h1>HELLO I AM CHILD</h1>
+    </>
+  )
+}
+function App()
+{
+  return (	
+    <>
+    <h2>HELLO GUYS</h2>
+    <Child></Child>
+    <h1>HELO DEAR STUDENTS</h1>
+    </>
+  )
+}
+
+export default App
+
+
+</html>
